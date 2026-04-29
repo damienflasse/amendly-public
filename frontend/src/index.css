@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-dots {
+    background-size: 20px 20px;
+  }
+  .hero-gradient {
+    background: linear-gradient(180deg, rgba(248,250,252,1) 0%, rgba(255,255,255,0) 100%);
+  }
+}
+
+/* Indeterminate progress bar animation for backend processing phase */
+@keyframes progress-slide {
+  0%   { transform: translateX(-100%); }
+  50%  { transform: translateX(150%); }
+  100% { transform: translateX(350%); }
+}
+
+/* Nested list indentation for imported DOCX content */
+li[data-level="1"] { padding-left: 1.5em; }
+li[data-level="2"] { padding-left: 3em; }
+li[data-level="3"] { padding-left: 4.5em; }
+li[data-level="4"] { padding-left: 6em; }
+li[data-level="5"] { padding-left: 7.5em; }
+
+/*
+ * .doc-body — wrapper class for document body rendering (read view + editor).
+ *
+ * CSS counters automatically number <h2> and <h3> headings to match the
+ * section numbers shown in the TOC and section manager.
+ *
+ * h2 → "1.", "2.", "3.", …
+ * h3 → "1.1.", "1.2.", …  (relative to last h2)
+ */
+.doc-body {
+  counter-reset: h2counter 0;
+}
+.doc-body h2 {
+  counter-increment: h2counter;
+  counter-reset: h3counter;
+}
+.doc-body h2::before {
+  content: counter(h2counter) ". ";
+  font-weight: 600;
+  opacity: 0.55;
+  margin-right: 0.15em;
+  user-select: none;
+  pointer-events: none;
+}
+.doc-body h3 {
+  counter-increment: h3counter;
+}
+.doc-body h3::before {
+  content: counter(h2counter) "." counter(h3counter) ". ";
+  font-weight: 600;
+  opacity: 0.55;
+  margin-right: 0.15em;
+  user-select: none;
+  pointer-events: none;
+}

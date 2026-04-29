@@ -1,0 +1,108 @@
+# robots.txt — Amendly
+# IMPORTANT: Cloudflare's "Managed robots.txt" feature may prepend its own
+# rules above this file, blocking AI crawlers. See seo-ai-visibility/report.md
+# for how to disable it in the Cloudflare dashboard.
+
+# ---------------------------------------------------------------------------
+# AI crawlers — explicitly allowed to index public content
+# ---------------------------------------------------------------------------
+User-agent: GPTBot
+Allow: /
+Disallow: /login
+Disallow: /dashboard
+Disallow: /account/
+Disallow: /orgs/
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /contribute/
+Disallow: /invitations/
+Disallow: /support
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /login
+Disallow: /dashboard
+Disallow: /account/
+Disallow: /orgs/
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /contribute/
+Disallow: /invitations/
+Disallow: /support
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /login
+Disallow: /dashboard
+Disallow: /account/
+Disallow: /orgs/
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /contribute/
+Disallow: /invitations/
+Disallow: /support
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /login
+Disallow: /dashboard
+Disallow: /account/
+Disallow: /orgs/
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /contribute/
+Disallow: /invitations/
+Disallow: /support
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /login
+Disallow: /dashboard
+Disallow: /account/
+Disallow: /orgs/
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /contribute/
+Disallow: /invitations/
+Disallow: /support
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /login
+Disallow: /dashboard
+Disallow: /account/
+Disallow: /orgs/
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /contribute/
+Disallow: /invitations/
+Disallow: /support
+
+User-agent: meta-externalagent
+Allow: /
+Disallow: /login
+Disallow: /dashboard
+Disallow: /account/
+Disallow: /orgs/
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /contribute/
+Disallow: /invitations/
+Disallow: /support
+
+# ---------------------------------------------------------------------------
+# All other crawlers (standard search engines, etc.)
+# ---------------------------------------------------------------------------
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /dashboard
+Disallow: /account/
+Disallow: /orgs/
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /contribute/
+Disallow: /invitations/
+Disallow: /support
+
+Sitemap: https://amendly.eu/sitemap.xml

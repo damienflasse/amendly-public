@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Brand background square with rounded corners -->
+  <rect width="32" height="32" rx="7" fill="#1a4bd4"/>
+  <!-- Letter A — Manrope-inspired geometric letterform -->
+  <text
+    x="16"
+    y="24"
+    font-family="Manrope, system-ui, sans-serif"
+    font-size="22"
+    font-weight="800"
+    fill="#ffffff"
+    text-anchor="middle"
+    dominant-baseline="auto"
+    letter-spacing="-0.5"
+  >A</text>
+</svg>

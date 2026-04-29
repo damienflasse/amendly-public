@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- Favicon + PWA manifest                                              -->
+    <!-- ------------------------------------------------------------------ -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#1a4bd4" />
+    <!-- Apple touch icon fallback — uses OG image (1200×630 PNG) -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Amendly" />
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- Default title — overridden per-route by useSeoMeta hook            -->
+    <!-- ------------------------------------------------------------------ -->
+    <title>Amendly — Amendment management for organisations</title>
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- Default meta description — overridden per-route                    -->
+    <!-- ------------------------------------------------------------------ -->
+    <meta
+      name="description"
+      content="Amendly gives associations, NGOs, and federations a structured workflow to collect, review, and consolidate amendments — from first draft to final text."
+    />
+
+    <!-- Indexing policy — overridden to noindex on protected routes -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Author / publisher signal -->
+    <meta name="author" content="Amendly" />
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- Default Open Graph — overridden per-route by useSeoMeta            -->
+    <!-- ------------------------------------------------------------------ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Amendly" />
+    <meta property="og:title" content="Amendly — Amendment management for organisations" />
+    <meta
+      property="og:description"
+      content="Amendly gives associations, NGOs, and federations a structured workflow to collect, review, and consolidate amendments."
+    />
+    <meta property="og:image" content="https://amendly.eu/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Amendly — Amendment management platform" />
+    <meta property="og:url" content="https://amendly.eu/" />
+    <meta property="og:locale" content="en" />
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- Twitter Card defaults                                               -->
+    <!-- ------------------------------------------------------------------ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@amendly" />
+    <meta name="twitter:title" content="Amendly — Amendment management for organisations" />
+    <meta
+      name="twitter:description"
+      content="Amendly gives associations, NGOs, and federations a structured workflow to collect, review, and consolidate amendments."
+    />
+    <meta name="twitter:image" content="https://amendly.eu/og-image.png" />
+    <meta name="twitter:image:alt" content="Amendly — Amendment management platform" />
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- Canonical — default for the root; overridden per-route             -->
+    <!-- ------------------------------------------------------------------ -->
+    <link rel="canonical" href="https://amendly.eu/" />
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- Structured data — static JSON-LD (always present, no JS needed)   -->
+    <!-- Dynamic version (with live pricing) is injected client-side by    -->
+    <!-- the JsonLd component in LandingPage / PricingPage.                -->
+    <!-- ------------------------------------------------------------------ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Amendly",
+      "url": "https://amendly.eu/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Amendly gives associations, NGOs, federations, and trade unions a structured workflow to collect, review, and consolidate amendments — from first draft to final text. Replaces Word tables and email threads with purpose-built amendment management.",
+      "featureList": [
+        "Structured amendment submission with original and proposed text",
+        "Automatic word-level diff display",
+        "Threaded reactions and comments per amendment",
+        "One-click consolidation of accepted amendments",
+        "Export to DOCX, PDF, and plain text",
+        "External contributor support",
+        "Multi-language interface (EN, FR, DE, ES)",
+        "GDPR-compliant, EU-hosted"
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Associations, NGOs, trade unions, federations, professional bodies"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Up to 3 documents, unlimited amendments and members"
+        },
+        {
+          "@type": "Offer",
+          "name": "Solo",
+          "price": "9",
+          "priceCurrency": "EUR",
+          "description": "1 user, up to 3 active documents"
+        },
+        {
+          "@type": "Offer",
+          "name": "Team",
+          "price": "29",
+          "priceCurrency": "EUR",
+          "description": "3 users included, up to 20 active documents"
+        },
+        {
+          "@type": "Offer",
+          "name": "Organisation",
+          "price": "99",
+          "priceCurrency": "EUR",
+          "description": "10 users included, unlimited documents"
+        }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Amendly",
+        "url": "https://amendly.eu/",
+        "logo": "https://amendly.eu/og-image.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "url": "https://amendly.eu/contact"
+        }
+      },
+      "inLanguage": ["en", "fr", "de", "es"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Amendly",
+      "url": "https://amendly.eu/",
+      "description": "Collaborative amendment management platform for associations, NGOs, trade unions, and federations.",
+      "inLanguage": ["en", "fr", "de", "es"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://amendly.eu/help?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- Google Fonts: preconnect first for faster DNS resolution           -->
+    <!-- ------------------------------------------------------------------ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!--
+      Preload the critical font subsets used above the fold:
+      Manrope 700 (display headlines) + Inter 400 (body text).
+      The full stylesheet is loaded right after; the preload ensures the
+      browser fetches the woff2 bytes as early as possible, eliminating FOIT.
+    -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="https://fonts.gstatic.com/s/manrope/v15/xn7gYHE41ni1AdIRggqxSuXd.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2"
+      crossorigin
+    />
+
+    <!-- Full font stylesheet — display=swap avoids invisible text during load -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

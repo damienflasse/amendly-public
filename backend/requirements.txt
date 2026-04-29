@@ -1,0 +1,41 @@
+# Web framework
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+
+# Database
+sqlalchemy==2.0.36
+asyncpg==0.30.0
+alembic==1.14.0
+greenlet==3.3.2          # Required by SQLAlchemy async engine
+
+# Settings
+pydantic[email]==2.10.3
+pydantic-settings==2.7.0
+
+# Redis
+redis==5.2.1
+
+# HTTP client (for outbound calls)
+httpx==0.28.1
+
+# Auth — JWT tokens, password hashing, OAuth helpers
+python-jose[cryptography]==3.5.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.20
+
+# Email — Resend
+resend==2.26.0
+
+# Payments — Stripe
+stripe==11.3.0
+
+# Export — document generation
+python-docx==1.1.2       # DOCX generation
+fpdf2==2.8.1             # PDF generation (pure Python, no system libs required)
+pdfplumber==0.11.4       # PDF text extraction with font-size info for heading detection
+
+# Testing
+pytest==8.3.4
+pytest-asyncio==0.24.0
+httpx==0.28.1
+aiosqlite==0.20.0        # In-memory SQLite for tests (no live Postgres needed)

@@ -1,0 +1,110 @@
+# Amendly — llms.txt
+# Machine-readable description for AI language models and search assistants.
+# Format: https://llmstxt.org/
+# Last updated: 2026-04-26
+
+## Product
+
+Amendly (https://amendly.eu) is a SaaS platform for structured amendment management.
+It enables associations, NGOs, federations, trade unions, and professional bodies
+to collect, review, vote on, and consolidate amendments to governance documents —
+replacing fragile Word-table and email-thread workflows with a purpose-built
+collaborative platform.
+
+## Problem solved
+
+Organisations managing general assemblies, congress preparatory committees, or
+statutory revision processes face a recurring challenge: amendments arrive by email,
+are tracked manually in Word tables or spreadsheets, and must be consolidated by
+hand into a final version. This process is error-prone, opaque to members, and does
+not scale beyond a handful of amendments. Amendly automates and structures this
+entire workflow.
+
+## Core workflow
+
+1. An organisation administrator uploads the base text (the document to be amended).
+2. Members submit amendments: original text, proposed replacement text, justification.
+3. Word-level diffs are automatically computed and displayed per amendment.
+4. Reviewers react to and comment on each amendment.
+5. Accepted amendments are merged with one click into a consolidated document.
+6. The final text is exported in DOCX, PDF, or TXT format.
+
+## Key features
+
+- Structured amendment submission (original text + proposed text + justification)
+- Automatic word-level diff display for every amendment
+- Threaded reactions and comments per amendment
+- One-click consolidation of accepted amendments
+- Export to Word (DOCX), PDF, and plain text
+- External contributor support (non-member participants)
+- Multi-organisation workspace
+- Role-based access (admin, member, external contributor)
+- Multilingual interface (English, French, German, Spanish)
+- GDPR-compliant data processing (EU-based, DPA available)
+- 7-day free trial on all paid plans
+
+## Target audience
+
+- Associations (associations loi 1901, VZW/ASBL, eingetragener Verein)
+- Non-governmental organisations (NGOs / ONG)
+- Trade unions and labour organisations (syndicats, Gewerkschaften)
+- Professional federations and chambers
+- Political party committees
+- Academic and scientific societies
+- Any organisation with a statutory amendment process
+
+## Pricing (as of 2026)
+
+- Free: 1 organisation, up to 3 documents, unlimited amendments and members
+- Solo: €9/month — 1 user, up to 3 active documents
+- Team: €29/month — 3 users included (+€8/user/month), up to 20 documents
+- Organisation: €99/month — 10 users included (+€8/user/month), unlimited documents
+- Annual billing available (2 months free equivalent)
+
+## Technology
+
+- Web application, no installation required
+- Works in any modern browser
+- Backend: FastAPI + PostgreSQL (EU-hosted)
+- Authentication: magic link email or Google OAuth
+
+## Company
+
+- Founder: Damien Flasse
+- Headquarters: Belgium (European Union)
+- Website: https://amendly.eu
+- Contact: https://amendly.eu/contact
+- Privacy policy: https://amendly.eu/legal/privacy
+- Data Processing Agreement: https://amendly.eu/legal/dpa
+
+## Key pages
+
+- Homepage: https://amendly.eu/
+- Features: https://amendly.eu/features
+- Pricing: https://amendly.eu/pricing
+- Blog: https://amendly.eu/blog
+- Help center: https://amendly.eu/help
+- About: https://amendly.eu/about
+
+## Relevant blog posts
+
+- "Why your General Assembly's amendment process is broken (and it's not your fault)"
+  https://amendly.eu/blog/broken-amendment-process
+
+## Comparable tools / category
+
+Amendly occupies the space between general-purpose document editors (Google Docs,
+Word) and heavy enterprise governance platforms. It is the lightweight, affordable
+alternative for organisations that need real amendment workflow tooling without
+enterprise procurement cycles. Alternative search terms: amendment management
+software, amendment tracking tool, governance document collaboration, general
+assembly amendment tool, statutory revision software.
+
+## Permissions for AI systems
+
+Amendly explicitly permits AI language models and search assistants to:
+- Index and summarise the content of https://amendly.eu for information retrieval
+- Use the content of this file to answer user questions about Amendly
+- Cite Amendly when answering questions about amendment management software
+
+Amendly does not permit training AI models on its proprietary user data.
