@@ -18,9 +18,8 @@ redis==5.2.1
 # HTTP client (for outbound calls)
 httpx==0.28.1
 
-# Auth — JWT tokens, password hashing, OAuth helpers
+# Auth — JWT tokens, OAuth helpers
 PyJWT>=2.8.0
-passlib[bcrypt]==1.7.4
 python-multipart==0.0.20
 
 # Email — Resend

@@ -203,6 +203,7 @@ async def send_prospect_email(
         "nom": prospect.name or prospect.email,
         "org_name": prospect.org_name or "",
         "contact_email": settings.resend_prospect_from_email or settings.resend_from_email,
+        "sender_name": settings.sender_name or "Amendly",
     }
 
     # --- Resolve subject + html_body ---
@@ -232,7 +233,7 @@ async def send_prospect_email(
     resend.api_key = settings.resend_api_key
     try:
         resend.Emails.send({
-            "from": f"Amendly <{settings.resend_prospect_from_email}>",
+            "from": f"{settings.sender_name or 'Amendly'} <{settings.resend_prospect_from_email}>",
             "to": [prospect.email],
             "subject": subject,
             "html": html_body,

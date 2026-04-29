@@ -37,6 +37,9 @@ class Settings(BaseSettings):
     # Internal support inbox — must be set via SUPPORT_INBOX_EMAIL env var
     support_inbox_email: str = ""
 
+    # Sender display name — used in prospect outreach emails (e.g. "Alice - Amendly")
+    sender_name: str = ""
+
     # Payments
     stripe_secret_key: str = ""
     # Webhook signature verification — leave empty to skip (dev only); must be set in production

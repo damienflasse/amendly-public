@@ -155,8 +155,8 @@ def upgrade() -> None:
                 "included_users": 3,
                 "extra_user_price_cents": 800,
                 "max_active_documents": None,
-                "stripe_price_id": "price_TEAM_MONTHLY_PLACEHOLDER",
-                "stripe_price_id_annual": "price_TEAM_ANNUAL_PLACEHOLDER",
+                "stripe_price_id": "",  # Set via STRIPE_PRICE_ID env var or admin panel
+                "stripe_price_id_annual": "",  # Set via admin panel
                 "features": '["Unlimited active documents", "External contributors", "Word + PDF export", "7-day free trial"]',
                 "is_active": True,
             },
@@ -166,8 +166,8 @@ def upgrade() -> None:
                 "included_users": 10,
                 "extra_user_price_cents": 600,
                 "max_active_documents": None,
-                "stripe_price_id": "price_ORG_MONTHLY_PLACEHOLDER",
-                "stripe_price_id_annual": "price_ORG_ANNUAL_PLACEHOLDER",
+                "stripe_price_id": "",  # Set via admin panel
+                "stripe_price_id_annual": "",  # Set via admin panel
                 "features": '["Unlimited active documents", "External contributors", "Word + PDF + CSV + JSON export", "7-day free trial"]',
                 "is_active": True,
             },

@@ -23,7 +23,7 @@ branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
 
-SOLO_PRICE_ID = "price_SOLO_MONTHLY_PLACEHOLDER"
+SOLO_PRICE_ID = ""  # REPLACE: your solo monthly Stripe Price ID (e.g. price_xxx)
 
 
 def upgrade() -> None:

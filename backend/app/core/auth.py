@@ -15,7 +15,7 @@ JWT signing secret to avoid breaking existing deployments.
 
 Current primitives:
   * `PyJWT`         → JWT signing (HS256 with BETTER_AUTH_SECRET)
-  * `passlib`       → bcrypt hashing for magic-link token storage
+  * `hashlib`       → SHA-256 hashing for magic-link token storage
   * `resend`        → transactional e-mail delivery
   * `httpx`         → outbound OAuth token exchange calls
 

@@ -86,7 +86,7 @@ async def post_contact(
     """
     Receive a public contact message and forward it to the Amendly inbox.
     """
-    ip = get_client_ip(request, trust_x_forwarded_for=True)
+    ip = get_client_ip(request)
     await _check_contact_rate_limit(ip)
 
     if body.website:

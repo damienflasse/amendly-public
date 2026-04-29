@@ -28,16 +28,18 @@ def upgrade() -> None:
     """Set Stripe monthly and annual price IDs for team and organisation."""
     conn = op.get_bind()
 
+    # Replace these placeholder values with your own Stripe Price IDs.
+    # Create recurring prices in your Stripe dashboard and paste the IDs here.
     updates = [
         (
             "team",
-            "price_TEAM_MONTHLY_PLACEHOLDER",
-            "price_TEAM_ANNUAL_PLACEHOLDER",
+            "",  # REPLACE: your team monthly Stripe Price ID (e.g. price_xxx)
+            "",  # REPLACE: your team annual Stripe Price ID
         ),
         (
             "organisation",
-            "price_ORG_MONTHLY_PLACEHOLDER",
-            "price_ORG_ANNUAL_PLACEHOLDER",
+            "",  # REPLACE: your organisation monthly Stripe Price ID
+            "",  # REPLACE: your organisation annual Stripe Price ID
         ),
     ]
 

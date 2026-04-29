@@ -85,9 +85,9 @@ async def lifespan(_: FastAPI) -> AsyncIterator[None]:
 app = FastAPI(
     title="Amendly API",
     version="0.1.0",
-    docs_url="/api/docs",
-    redoc_url="/api/redoc",
-    openapi_url="/api/openapi.json",
+    docs_url=None if settings.is_production else "/api/docs",
+    redoc_url=None if settings.is_production else "/api/redoc",
+    openapi_url=None if settings.is_production else "/api/openapi.json",
     lifespan=lifespan,
 )
 

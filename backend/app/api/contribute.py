@@ -268,7 +268,7 @@ async def submit_public_amendment(
         HTTPException 403: Anti-bot check failed.
         HTTPException 422: Validation error (missing required fields).
     """
-    ip = get_client_ip(request, trust_x_forwarded_for=True)
+    ip = get_client_ip(request)
     await _check_rate_limit(ip)
     if not await verify_turnstile(
         body.cf_turnstile_token,

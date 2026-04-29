@@ -18,3 +18,4 @@ htmlcov/
 .env.*.local
 *.orig
 Thumbs.db
+.claude/

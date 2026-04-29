@@ -573,7 +573,7 @@ _DEFAULT_BODIES: dict[str, str] = {
               <p style="margin:0;font-family:Arial,sans-serif;font-size:15px;
                         color:#2a3439;line-height:1.75;">
                 Bien &agrave; vous,<br/>
-                  <strong>{sender_name}</strong><br/>
+                <strong>{sender_name}</strong><br/>
                 <span style="color:#717c82;font-size:13px;">Fondateur &#8212; Amendly</span>
               </p>
             </td>
@@ -678,7 +678,7 @@ _DEFAULT_BODIES: dict[str, str] = {
               <p style="margin:0;font-family:Arial,sans-serif;font-size:15px;
                         color:#2a3439;line-height:1.75;">
                 Bien &agrave; vous,<br/>
-                  <strong>{sender_name}</strong><br/>
+                <strong>{sender_name}</strong><br/>
                 <span style="color:#717c82;font-size:13px;">Fondateur &#8212; Amendly</span>
               </p>
             </td>
@@ -848,7 +848,7 @@ _DEFAULT_BODIES: dict[str, str] = {
               <p style="margin:0;font-family:Arial,sans-serif;font-size:15px;
                         color:#2a3439;line-height:1.75;">
                 Bien &agrave; vous,<br/>
-                  <strong>{sender_name}</strong><br/>
+                <strong>{sender_name}</strong><br/>
                 <span style="color:#717c82;font-size:13px;">Fondateur &#8212; Amendly</span>
               </p>
             </td>
@@ -945,7 +945,7 @@ _DEFAULT_BODIES: dict[str, str] = {
               <p style="margin:0;font-family:Arial,sans-serif;font-size:15px;
                         color:#2a3439;line-height:1.75;">
                 Bonne continuation,<br/>
-                  <strong>{sender_name}</strong><br/>
+                <strong>{sender_name}</strong><br/>
                 <span style="color:#717c82;font-size:13px;">Fondateur &#8212; Amendly</span>
               </p>
             </td>
@@ -1193,7 +1193,7 @@ _DEFAULT_BODIES: dict[str, str] = {
               <p style="margin:0;font-family:Arial,sans-serif;font-size:15px;
                         color:#2a3439;line-height:1.75;">
                 Best regards,<br/>
-                  <strong>{sender_name}</strong><br/>
+                <strong>{sender_name}</strong><br/>
                 <span style="color:#717c82;font-size:13px;">Founder &#8212; Amendly</span>
               </p>
             </td>
@@ -1291,7 +1291,7 @@ _DEFAULT_BODIES: dict[str, str] = {
               <p style="margin:0;font-family:Arial,sans-serif;font-size:15px;
                         color:#2a3439;line-height:1.75;">
                 Happy to exchange a few words if you&rsquo;re open to it.<br/><br/>
-                  <strong>{sender_name}</strong><br/>
+                <strong>{sender_name}</strong><br/>
                 <span style="color:#717c82;font-size:13px;">Founder &#8212; Amendly</span>
               </p>
             </td>
@@ -1414,7 +1414,7 @@ _DEFAULT_BODIES: dict[str, str] = {
                         color:#2a3439;line-height:1.75;">
                 If this sounds useful, I&rsquo;m available for a short demo this week &#8212;
                 just let me know.<br/><br/>
-                  <strong>{sender_name}</strong><br/>
+                <strong>{sender_name}</strong><br/>
                 <span style="color:#717c82;font-size:13px;">Founder &#8212; Amendly</span>
               </p>
             </td>
@@ -1512,7 +1512,7 @@ _DEFAULT_BODIES: dict[str, str] = {
               </p>
               <p style="margin:0;font-family:Arial,sans-serif;font-size:15px;
                         color:#2a3439;line-height:1.75;">
-                  <strong>{sender_name}</strong><br/>
+                <strong>{sender_name}</strong><br/>
                 <span style="color:#717c82;font-size:13px;">Founder &#8212; Amendly</span>
               </p>
             </td>
