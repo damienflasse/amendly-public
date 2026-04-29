@@ -57,6 +57,11 @@ def _log_startup_configuration_warnings() -> None:
             "STRIPE_WEBHOOK_SECRET is not set — Stripe webhook signature "
             "verification is disabled. Set this in production."
         )
+    if not settings.resend_from_email:
+        _logger.warning(
+            "RESEND_FROM_EMAIL is not set — transactional emails will use an "
+            "empty sender address and likely be rejected by Resend."
+        )
     if not settings.resend_prospect_from_email:
         _logger.warning(
             "RESEND_PROSPECT_FROM_EMAIL is not set — prospect outreach emails "
