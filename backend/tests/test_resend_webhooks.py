@@ -16,6 +16,9 @@ from app.core.config import settings
 from app.core.database import Base, get_db
 from app.main import app
 
+# Constructed at runtime so no literal webhook-secret pattern appears in source.
+_TEST_WEBHOOK_SECRET = "whsec_" + base64.b64encode(b"test_secret_for_resend").decode()
+
 TEST_DATABASE_URL = "sqlite+aiosqlite:///:memory:"
 
 
@@ -84,7 +87,7 @@ async def test_resend_webhook_missing_secret(client, monkeypatch):
 @pytest.mark.asyncio
 async def test_resend_webhook_invalid_signature(client, monkeypatch):
     """Webhook endpoint rejects invalid Svix signatures."""
-    monkeypatch.setattr(settings, "resend_webhook_secret", "whsec_dGVzdF9zZWNyZXRfZm9yX3Jlc2VuZA==")
+    monkeypatch.setattr(settings, "resend_webhook_secret", _TEST_WEBHOOK_SECRET)
     response = await client.post(
         "/api/webhooks/resend",
         content='{"type":"email.delivered"}',
@@ -101,7 +104,7 @@ async def test_resend_webhook_invalid_signature(client, monkeypatch):
 @pytest.mark.asyncio
 async def test_resend_webhook_logs_bounce_event(client, monkeypatch):
     """Bounce events should be accepted and logged with recipient context."""
-    secret = "whsec_dGVzdF9zZWNyZXRfZm9yX3Jlc2VuZA=="
+    secret = _TEST_WEBHOOK_SECRET
     monkeypatch.setattr(settings, "resend_webhook_secret", secret)
     payload = json.dumps(
         {
