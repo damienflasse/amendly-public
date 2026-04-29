@@ -3,11 +3,11 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
 import { createRoot } from 'react-dom/client'
 
-import OrgDetail from './src/pages/OrgDetail.jsx'
+import OrgDetail from '../OrgDetail.jsx'
 globalThis.IS_REACT_ACT_ENVIRONMENT = true
 const turnstileSiteKeyMock = vi.hoisted(() => vi.fn(() => ''))
 
-vi.mock('./src/components/UpgradeCallout', () => ({
+vi.mock('../../components/UpgradeCallout', () => ({
   default: () => React.createElement('div', null, 'upgrade'),
 }))
 
@@ -18,7 +18,7 @@ vi.mock('@marsidev/react-turnstile', () => ({
   }),
 }))
 
-vi.mock('./src/components/RichTextEditor', () => ({
+vi.mock('../../components/RichTextEditor', () => ({
   default: ({ value, onChange, placeholder }) =>
     React.createElement('textarea', {
       'aria-label': placeholder,
@@ -27,17 +27,17 @@ vi.mock('./src/components/RichTextEditor', () => ({
     }),
 }))
 
-vi.mock('./src/components/LanguageSwitcher', () => ({
+vi.mock('../../components/LanguageSwitcher', () => ({
   default: () => React.createElement('div', null, 'language-switcher'),
 }))
 
-vi.mock('./src/components/NotificationBell', () => ({
+vi.mock('../../components/NotificationBell', () => ({
   default: () => React.createElement('div', null, 'notification-bell'),
 }))
 
-import { orgClient } from './src/lib/organisations'
+import { orgClient } from '../../lib/organisations'
 
-vi.mock('./src/lib/organisations', () => ({
+vi.mock('../../lib/organisations', () => ({
   orgClient: {
     getOrg: vi.fn(),
     listDocuments: vi.fn(),
@@ -50,24 +50,24 @@ vi.mock('./src/lib/organisations', () => ({
   }
 }))
 
-vi.mock('./src/lib/auth', () => ({
+vi.mock('../../lib/auth', () => ({
   authHeaders: () => ({ Authorization: 'Bearer test-token' }),
 }))
 
-vi.mock('./src/lib/documentImport', () => ({
+vi.mock('../../lib/documentImport', () => ({
   extractDocxFile: vi.fn(),
   extractPdfFile: vi.fn(),
 }))
 
-vi.mock('./src/hooks/useTranslation', () => ({
+vi.mock('../../hooks/useTranslation', () => ({
   useTranslation: () => ({ t: (key) => key }),
 }))
 
-vi.mock('./src/lib/turnstile', () => ({
+vi.mock('../../lib/turnstile', () => ({
   getTurnstileSiteKey: turnstileSiteKeyMock,
 }))
 
-vi.mock('./src/store/authStore', () => ({
+vi.mock('../../store/authStore', () => ({
   default: (selector) => selector({ user: { id: 'user-1', email: 'owner@example.com' } }),
 }))
 

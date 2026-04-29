@@ -14,7 +14,7 @@ The legacy environment variable name `BETTER_AUTH_SECRET` is still used as the
 JWT signing secret to avoid breaking existing deployments.
 
 Current primitives:
-  * `python-jose`   → JWT signing (HS256 with BETTER_AUTH_SECRET)
+  * `PyJWT`         → JWT signing (HS256 with BETTER_AUTH_SECRET)
   * `passlib`       → bcrypt hashing for magic-link token storage
   * `resend`        → transactional e-mail delivery
   * `httpx`         → outbound OAuth token exchange calls
@@ -32,7 +32,7 @@ from typing import Any
 import resend
 from fastapi import Cookie, Depends, HTTPException, Request, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
-from jose import JWTError, jwt
+import jwt
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -106,7 +106,7 @@ def decode_access_token(token: str) -> dict[str, Any]:
     try:
         payload = jwt.decode(token, settings.better_auth_secret, algorithms=[ALGORITHM])
         return payload
-    except JWTError as exc:
+    except jwt.PyJWTError as exc:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Invalid or expired token",

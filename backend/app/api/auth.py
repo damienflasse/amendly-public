@@ -731,7 +731,7 @@ async def logout(request: Request, response: Response) -> None:
         _clear_session_cookie(response, request)
         return None
     try:
-        from jose import jwt as _jwt  # noqa: PLC0415
+        import jwt as _jwt  # noqa: PLC0415
         payload = _jwt.decode(
             raw_token, settings.better_auth_secret, algorithms=["HS256"]
         )
